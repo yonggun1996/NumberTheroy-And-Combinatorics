@@ -8,21 +8,22 @@
 
 예를 들어 22와 8의 최대공약수를 구한다고 가정하자. 가로가 22, 세로가 8인 직사각형을 가로를 8cm로 나눠보면 다음과 같다.
 
-https://user-images.githubusercontent.com/68115246/128592333-c1f7ddcd-b79b-44a3-835d-bfb6681ef326.png
+![유클리드 호제법1](https://user-images.githubusercontent.com/68115246/128592919-1ff638e1-b8e6-46a2-ab92-e773c1856306.png)
 
 이 때 세로가 8cm 가로가 6cm인 직사각형이 남는다. 이번엔 세로 8cm를 6cm로 나누면 다음과 같다.
 
-https://user-images.githubusercontent.com/68115246/128592434-27d9af6f-c7cd-46da-b572-62bba59d993e.png
+![유클리드 호제법2](https://user-images.githubusercontent.com/68115246/128592434-27d9af6f-c7cd-46da-b572-62bba59d993e.png)
 
 이번엔 세로 2cm가 남았다. 아까의 연산을 반복해 가로 6cm를 2cm으로 나눠보면 다음과 같다.
 
-https://user-images.githubusercontent.com/68115246/128592493-cf1d705e-4f05-4f2b-ab10-c707363d9832.png
+![유클리드 호제법3](https://user-images.githubusercontent.com/68115246/128592900-4360acad-f827-4d9f-86b8-cd5f95f13fd1.png)
+
 
 이번엔 특별히 작은 사각형이 없고 모두 똑같이 나눠 떨어진다. 8과 22를 최대로 나눌 수 있는 최대 공약수는 2이며 최소공배수는 구한 최대공약수를 토대로 (8 / 2) * (22 / 2) * 2를 하면 88이 된다.
 
 이를 소스코드로 구현할 때는 나머지 연산을 이용하면 된다.
 
-https://user-images.githubusercontent.com/68115246/128592574-7c8d8d30-01ba-4b63-9aa7-065c7430f800.png
+![유클리드 호제법4](https://user-images.githubusercontent.com/68115246/128592574-7c8d8d30-01ba-4b63-9aa7-065c7430f800.png)
 
 - 유클리드 호제법을 이용한 문제(백준 알고리즘 2609번 문제)
 ```java
@@ -69,7 +70,7 @@ public class Main {
 
 더 정확한 공식은 아래 그림을 참조하면 된다.
 
-https://user-images.githubusercontent.com/68115246/128592779-2d3de5dc-2911-4a6c-999c-61cca7ef7394.png
+![조합1](https://user-images.githubusercontent.com/68115246/128592779-2d3de5dc-2911-4a6c-999c-61cca7ef7394.png)
 
 팩토리얼 연산을 이용해 구하는데 이것을 하나하나 곱하면 시간상의 문제가 생길 수 있다.
 그래서 다음 소스코드를 보면 팩토리얼은 DP를 이용해서 구현했고, 이에 따라 공식을 대입해 문제를 풀었다.
